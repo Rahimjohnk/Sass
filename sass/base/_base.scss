@@ -1,0 +1,29 @@
+*,
+::after,
+::before {
+    margin           : 0;
+    padding          : 0;
+    /* box-sizing    : border-box; */
+    box-sizing       : inherit;
+}
+
+html {
+    /* we want in % best practice*/
+    /* 16px => 100% */
+    /* we want only 10px for calculate easiar 10px => ? */
+    /* font-size: 10px; */
+    
+    // this defines what 1rem is
+    font-size: 62.5%;
+
+    /* 1rem = 16px; (root font size)*/
+    /* 1rem = 10px  we assume (root font size) (100%) and we want in %*/
+    /* we want 10px so that 10/16 = 62.5% */
+    /* .625*16=10px */
+    /* 16px => 100% so that 10px => 62.5%*/
+    /* rem not working blow internet ex 9 v */
+}
+
+body {
+    box-sizing: border-box;
+}

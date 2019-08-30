@@ -1,0 +1,7 @@
+@mixin clearfix {
+    &::after{
+        content: ""; // we don't wanna see that element in the template.
+        display: table;
+        clear: both;
+    }
+}
