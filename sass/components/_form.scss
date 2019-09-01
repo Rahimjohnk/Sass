@@ -84,6 +84,7 @@
             //just we want circule in perfect mid of radio button outer circule
             content         : "";
             display         : block;
+            //if we use ::after psudo classes then should use there two properties  content: ""; display: block;
             height          : 1.3rem;
             width           : 1.3rem;
             border-radius   : 50%;
