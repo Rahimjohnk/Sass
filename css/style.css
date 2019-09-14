@@ -1,3 +1,20 @@
+/*
+0 - 600px   : Phone
+600 - 900px :   Tablet portrait
+900 - 1200px:  Tablet landscape
+[1200 - 1800px] id where our normal styles apply
+1800px + : Big destops
+*/
+/*
+$brackpoint arguement choices:
+ phone
+ tab-port
+ tab-land
+ big-desktop
+
+ em is best choise for media queries so that 
+ 1em 16px;
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -46,6 +63,18 @@ html {
   /* .625*16=10px */
   /* 16px => 100% so that 10px => 62.5%*/
   /* rem not working blow internet ex 9 v */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.26%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
