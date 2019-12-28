@@ -11,6 +11,10 @@
     &__logo-box {
         text-align   : center; // b/coz this is inline element so that we use just use text-align center to center the image
         margin-bottom: 8rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 6rem;
+        }
     }
 
     &__logo {
