@@ -46,17 +46,25 @@ html {
         font-size: 50%; //1 rem =>8px  8px/16px =0.50 => 0.50*100 => 50%;
     }
 
-    @include respond(phone) {
-        // width < 600?
-        font-size: 30%; // we want 30% so that => (30/100)*16 => 0.3*16=> 4.8px => so that 1rem = 4.8px;
-    }
+    // @include respond(phone) {
+    //     // width < 600?
+    //     font-size: 30%; // we want 30% so that => (30/100)*16 => 0.3*16=> 4.8px => so that 1rem = 4.8px;
+    // }
 
     @include respond(big-desktop) {
-        // width < 1800?
+        // width > 1800?
         font-size: 75%; //1 rem => 12px 12px/16px =75%;
     }
 }
-
+//The box-sizing property allows us to include the padding and border in an element's total width and height.
+//If you set box-sizing: border-box; on an element padding and border are included in the width and height:
 body {
     box-sizing: border-box;
+    
+    padding   : 3rem;
+
+    @include respond(tab-port) {
+
+        padding: 0;
+    }
 }

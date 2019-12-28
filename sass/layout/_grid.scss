@@ -1,10 +1,19 @@
 .row {
-    max-width       : $gird-width;
+    max-width          : $gird-width;
     // background-color: #eee;
-    margin          : 0 auto;
+    margin             : 0 auto;
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+    @include respond(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
     }
 
     @include clearfix; //row hight 0px that why we use clearfix and all the other contents are floated
@@ -14,10 +23,19 @@
     // [class^="col-"] if its apply starts with "col-" class
     [class^="col-"] {
         // background-color: orangered;
-        float           : left;
+        float              : left;
 
         &:not(:last-child) {
             margin-right: $gutter-horizondal;
+
+            @include respond(tab-port) {
+                margin-right : 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important;
         }
     }
 

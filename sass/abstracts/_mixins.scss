@@ -40,6 +40,8 @@ $brackpoint arguement choices:
 
  em is best choise for media queries so that 
  1em 16px;
+
+ ORDER:Base + typography > General layout + grid > page layout > components 
 */
 
 @mixin respond($brackpoin) {
@@ -54,7 +56,7 @@ $brackpoint arguement choices:
 
     @if $brackpoin==tab-port {
         @media (max-width: 56.25em) {
-            // 800/16 = 56.25em
+            // 900/16 = 56.25em
             @content
         }
 

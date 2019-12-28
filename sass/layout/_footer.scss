@@ -4,6 +4,10 @@
     font-size       : 1.4rem;
     color           : $color-light-gray1;
 
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
     &__logo-box {
         text-align   : center; // b/coz this is inline element so that we use just use text-align center to center the image
         margin-bottom: 8rem;
@@ -18,6 +22,11 @@
         border-top : 1px solid $color-dark-gray;
         padding-top: 2rem;
         display    : inline-block;
+
+        @include respond(tab-port) {
+            width     : 100%;
+            text-align: center;
+        }
     }
 
     &__list {
@@ -59,5 +68,10 @@
         // display    : inline-block;
         width         : 80%;
         float         : right;
+
+        @include respond(tab-port) {
+            width: 100%;
+            float: none;
+        }
     }
 }
