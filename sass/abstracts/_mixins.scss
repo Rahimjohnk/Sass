@@ -1,8 +1,8 @@
 @mixin clearfix {
-    &::after {
-        content: ""; // we don't wanna see that element in the template.
-        display: table;
-        clear  : both;
+    &::after { // psudo element
+        content: ""; // we don't wanna see that element in the template. // it should here
+        display: table; // is the standared way
+        clear  : both; // clear both left right float 
     }
 }
 
