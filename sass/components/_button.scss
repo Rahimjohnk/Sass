@@ -78,22 +78,23 @@
         font-size      : $default-font-size;
         color          : $color-primary;
         text-decoration: none;
-        display        : inline-block;
+        display        : inline-block; // so that box-modal applied here so we use padding
         border-bottom  : 1px solid $color-primary;
         padding        : 3px;
-        transition     : all .2s;
+
+        transition: all .2s;
     }
 
     &:hover {
         color           : $color-white;
         background-color: $color-primary;
+        box-shadow      : 0 1rem 2rem rgba($color-black, .15);
         transform       : translateY(-2px);
-        box-shadow      : 0 1rem 2rem rgba($color-black, .15)
     }
 
     &:active {
+        box-shadow: 0 .5rem 2rem rgba($color-black, .15);
         transform : translateY(0);
-        box-shadow: 0 .5rem 2rem rgba($color-black, .15)
     }
 
 

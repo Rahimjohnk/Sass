@@ -1,20 +1,31 @@
 .card {
 
+    // background-color: orangered;
+    // height          : 50rem;
+
     //FUNCTIONALITY
-    perspective     : 150rem;
-    -moz-perspective: 150rem;
-    height          : 52rem;
+    perspective     : 150rem; // it gives user interactive 3d effects it must be declared in parent.
+    -moz-perspective: 150rem; // if we want use this in mozilar fire fox
+    height          : 52rem; // to specified for hieght collapes issue.
     position        : relative;
 
     &__side {
+        // background-color      : orangered;
+        // color                 : #fff;
+        // font-size             : 2rem;
+
         height    : 52rem;
         transition: all .8s ease;
 
         position           : absolute;
         top                : 0;
         left               : 0;
-        width              : 100%;
-        backface-visibility: hidden;
+        width              : 100%; // if we use absolute positioning elements take available width
+        // so we use width : 100% here. 
+        backface-visibility: hidden; // it actually does to hide the back part of element
+
+        // here we use absolute positioning  it cause the height and perspective collapse issue , here we can't use clear fix we use it only floats
+        // here we specify side height equal to card height . then we can see perspective in card side rotation 
 
         border-radius: 3px;
         overflow     : hidden;
@@ -25,7 +36,7 @@
         }
 
         &--back {
-            transform: rotateY(180deg);
+            transform: rotateY(180deg); // back side is alread roted 108deg when first we look
 
             &-1 {
                 background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
@@ -43,10 +54,12 @@
 
 
     &:hover &__side--front {
+        // .card :hover .card__side--front
         transform: rotateY(-180deg);
     }
 
     &:hover &__side--back {
+        // .card :hover .card__side--back
         transform: rotateY(0);
     }
 
@@ -66,6 +79,9 @@
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
                 url(../img/nat-5.jpg);
+                // ../img/nat-5.jpg why one level up because as well as sass converted to css
+                // in the end that is css/style.css . so form style.css to one level up is img file so that we wrote
+                // like this.
         }
 
         &--2 {
