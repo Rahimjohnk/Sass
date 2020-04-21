@@ -79,9 +79,9 @@
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
                 url(../img/nat-5.jpg);
-                // ../img/nat-5.jpg why one level up because as well as sass converted to css
-                // in the end that is css/style.css . so form style.css to one level up is img file so that we wrote
-                // like this.
+            // ../img/nat-5.jpg why one level up because as well as sass converted to css
+            // in the end that is css/style.css . so form style.css to one level up is img file so that we wrote
+            // like this.
         }
 
         &--2 {
@@ -108,6 +108,7 @@
     }
 
     &__heading-span {
+        // new element 
         padding                     : 1rem 1.5rem;
         -webkit-box-decoration-break: clone;
         box-decoration-break        : clone;

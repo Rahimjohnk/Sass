@@ -240,7 +240,8 @@
             </div>
             <div class="row">
                 <div class="story">
-                    <figure class="story__shape">
+                    <figure class="story__shape"> 
+                        <!-- if we want img with text caption then use figure HTML5 element  -->
                         <img src="img/nat-8.jpg" alt="" class="story__img">
                         <figcaption class="story__caption">
                             marry smith
@@ -297,6 +298,8 @@
                             <div class="form__group u-margin-bottom-medium">
                                 <div class="form__radio-group">
                                     <input type="radio" class="form__radio-input" id="small" name="size">
+                                    <!-- all of the radio has same name then only one radio input get selected. -->
+                                    <!-- we can do like functionality in checkbox too -->
                                     <label for="small" class="form__radio-label">
                                         <span class="form__radio-button"></span>
                                         Small tour groups
@@ -304,6 +307,8 @@
                                 </div>
                                 <div class="form__radio-group">
                                     <input type="radio" class="form__radio-input" id="large" name="size">
+                                    <!-- all of the radio has same name then only one radio input get selected. -->
+                                     <!-- Original radio button will be hidden here  -->
                                     <label for="large" class="form__radio-label">
                                         <span class="form__radio-button"></span>
                                         Large tour groups
@@ -311,7 +316,8 @@
                                 </div>
                             </div>
                             <div class="form__group">
-                                <button class="btn btn--green">Next step &rarr;</button>
+                                <button class="btn btn--green">Next step &rarr;</button> 
+                                <!-- form really needs button element. we does not use anchor b/c is not submit form -->
                             </div>
                         </form>
                     </div>

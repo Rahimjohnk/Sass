@@ -1,5 +1,6 @@
 @mixin clearfix {
-    &::after { // psudo element
+    &::after {
+        // psudo element
         content: ""; // we don't wanna see that element in the template. // it should here
         display: table; // is the standared way
         clear  : both; // clear both left right float 
@@ -16,13 +17,13 @@
 
 //MEDIA QUERY MANAGER
 /*
-0 - 600px   : Phone
-600 - 900px :   Tablet portrait
-900 - 1200px:  Tablet landscape
+0 - 600px   : Phone (max-width)
+600 - 900px :   Tablet portrait (max-width)
+900 - 1200px:  Tablet landscape (max-width)
 [1200 - 1800px] id where our normal styles apply
-1800px + : Big destops
+1800px + : Big destops (min-width)
 */
-
+// with the help of @content directive we can pass required entier block of code(props)
 // @mixin respond-phone {
 //     @media (max-width: 600px) {
 //         @content
@@ -38,16 +39,26 @@ $brackpoint arguement choices:
  tab-land
  big-desktop
 
+ we can't use px b/c if user to change browser font size it will affects the media query too.
+
+ ems and rems in media querys they are not affected by root font size setting html{font-size: 62.5%;}.
+
+ //1rem and 1em in a media query is always just equal to the font-size which is comming form the browser.
+  that by default 16px s, if the user changed it like 20px then it will be 20px nomatter what we have in 
+ base font definations  html{font-size: 62.5%;}.
+ rems are faild most of browser so 
  em is best choise for media queries so that 
  1em 16px;
 
- ORDER:Base + typography > General layout + grid > page layout > components 
+ media query ORDER:Base + typography > General layout + grid > page layout > components 
 */
 
 @mixin respond($brackpoin) {
     @if $brackpoin==phone {
-        @media (max-width: 37.5em) {
-            // 600/16 = 37.5em
+        @media (max-width: 37.5em) { // 1em 16px; 
+            // then this 37.5em like relative units converted to pxs 
+            // and will be adapted to the font size that the user sets for the browsers 
+            // 600/16  = 37.5em
             @content
         }
 

@@ -9,7 +9,7 @@
     }
 
     &__logo-box {
-        text-align   : center; // b/coz this is inline element so that we use just use text-align center to center the image
+        text-align   : center; // b/coz Img is a inline element so that we use just use text-align center to center the image
         margin-bottom: 8rem;
 
         @include respond(tab-port) {
@@ -25,8 +25,8 @@
     &__navigation {
         border-top : 1px solid $color-dark-gray;
         padding-top: 2rem;
-        display    : inline-block;
-
+        display    : inline-block; // to remove border-top extra line 
+        // inline-block does occupies 100% of available width only the one that content needs
         @include respond(tab-port) {
             width     : 100%;
             text-align: center;

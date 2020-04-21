@@ -32,8 +32,7 @@ html {
     //     font-size: 50%;
     // }
 
-    //if width is 500px means both phone and tab-port was apply so that  we simply removed that 
-    //to avoid confilct each other so code order matters
+
 
 
     @include respond(tab-land) {
@@ -41,6 +40,9 @@ html {
         font-size: 56.26%; //1 rem => 9px 9px/16px =0.5626 => 0.5626*100=> 56.26%;
     }
 
+    // if width is 500px means both phone and tab-port was apply so that  we simply removed that 
+    // to avoid confilct each other so code order matters
+    // in media query always follows the order larger one( width < 1200?) is before and smaller one(width < 900?) is after
     @include respond(tab-port) {
         // width < 900?
         font-size: 50%; //1 rem =>8px  8px/16px =0.50 => 0.50*100 => 50%;
@@ -56,12 +58,13 @@ html {
         font-size: 75%; //1 rem => 12px 12px/16px =75%;
     }
 }
+
 //The box-sizing property allows us to include the padding and border in an element's total width and height.
 //If you set box-sizing: border-box; on an element padding and border are included in the width and height:
 body {
     box-sizing: border-box;
-    
-    padding   : 3rem;
+
+    padding: 3rem;
 
     @include respond(tab-port) {
 
