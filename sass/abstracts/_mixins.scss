@@ -55,7 +55,8 @@ $brackpoint arguement choices:
 
 @mixin respond($brackpoin) {
     @if $brackpoin==phone {
-        @media (max-width: 37.5em) { // 1em 16px; 
+        @media only screen and (max-width: 37.5em) { // (only screen ) media query gets only apply screens not for print screens
+            // 1em 16px; 
             // then this 37.5em like relative units converted to pxs 
             // and will be adapted to the font size that the user sets for the browsers 
             // 600/16  = 37.5em
@@ -66,7 +67,7 @@ $brackpoint arguement choices:
     }
 
     @if $brackpoin==tab-port {
-        @media (max-width: 56.25em) {
+        @media only screen and (max-width: 56.25em) {
             // 900/16 = 56.25em
             @content
         }
@@ -75,7 +76,7 @@ $brackpoint arguement choices:
     }
 
     @if $brackpoin==tab-land {
-        @media (max-width: 75em) {
+        @media only screen and (max-width: 75em) {
             // 1200/16 = 75em
             @content
         }
@@ -84,7 +85,7 @@ $brackpoint arguement choices:
     }
 
     @if $brackpoin==big-desktop {
-        @media (min-width: 112.5em) {
+        @media only screen and (min-width: 112.5em) {
             // 1800/16 = 112.5em
             @content
         }

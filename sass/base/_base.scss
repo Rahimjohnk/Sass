@@ -71,3 +71,8 @@ body {
         padding: 0;
     }
 }
+
+::selection { // for text selection
+    background-color: $color-primary;
+    color           : $color-white;
+}

@@ -179,7 +179,10 @@
         font-size  : 6rem;
     }
 
-    @include respond(tab-port) {
+    // @include respond(tab-port) { we want to add another condition so we put raw code hrer
+    @media only screen and (max-width: 56.25em),
+    only screen and (hover: none) {
+        // to find touch devices same (hover: hover)
         //FUNCTIONALITY
 
         height          : auto;

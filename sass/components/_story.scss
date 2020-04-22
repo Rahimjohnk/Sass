@@ -37,15 +37,25 @@
         width                : 15rem;
         height               : 15rem;
         float                : left;
-        -webkit-clip-path    : circle(50% at 50% 50%);
-        clip-path            : circle(50% at 50% 50%); // if we want element look like circle the use clip-path
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside        : circle(50% at 50% 50%); // it defined where the content flows arround the element.
+        // -webkit-clip-path    : circle(50% at 50% 50%);
+        // clip-path            : circle(50% at 50% 50%); // if we want element look like circle the use clip-path
+        // -webkit-shape-outside: circle(50% at 50% 50%);
+        // shape-outside        : circle(50% at 50% 50%); // it defined where the content flows arround the element.
         // shape-outside     : circle(50% (radious that is half of width and height that is 7.5rem) at 50% 50% (exact center point of circle));
         // It only works when elements which actually floated and has dimension(width and height) too. here this element is floated.
         transform                              : translateX(-3rem) skewX(12deg);
         //we can't use more than one transform : translate property . so that we here can't use direct child
         position                               : relative;
+
+        overflow: hidden;
+        border-radius: 50%;
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
+            -webkit-clip-path    : circle(50% at 50% 50%);
+            clip-path            : circle(50% at 50% 50%); // if we want element look like circle the use clip-path
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside        : circle(50% at 50% 50%); // it defined where the content flows arround the element.
+            border-radius: none;
+        }
 
         @include respond(phone) {
             transform: translateX(-3rem) skewX(0);
